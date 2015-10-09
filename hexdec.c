@@ -13,7 +13,6 @@
 
 const unsigned char *skip_hd_header(const unsigned char *line)
 {
-	int i;
 	const unsigned char *p = line;
 
 	while (*p && isxdigit(*p)) p++;
