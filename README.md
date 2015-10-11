@@ -83,16 +83,13 @@ Japanese language de 文字列
 
 ### Combined with vim
 These tools can be combined with `vim` to simulate ancient JVim3 (Japanized Vim 3) binary mode behavior.
+
+Merge `vim/binary.vim` into your `.vimrc`(or whatever), and place `vim/syntax/hd.vim` into your vim syntax directory.
+
+After that,
 ```
-" vim -b
-augroup Binary
-	au!
-	au BufReadPre  *.bin let &bin=1
-	au BufReadPost * if &bin | silent %!hd
-	au BufReadPost * set ft=xxd | endif
-	au BufWritePre * if &bin | silent %!hexdec
-	au BufWritePre * endif
-	au BufWritePost * if &bin | silent %!hd
-	au BufWritePost * set nomod | endif
-augroup END
+vim -b hd
 ```
+resulting like;
+
+![vim screenshot](https://github.com/kikuchan/hexutils/raw/master/vim/screenshot-vim.png)
