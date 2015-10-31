@@ -145,7 +145,7 @@ int main(int argc, char *argv[])
 
 	for (; argc > 0; argc--, argv++) {
 		FILE *fp;
-		char buf[1024];
+		char buf[1023];
 
 		if (!strcmp(*argv, "-")) {
 			fp = stdin;
