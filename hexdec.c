@@ -123,7 +123,7 @@ void usage()
 
 int main(int argc, char *argv[])
 {
-	int ret;
+	int ret = 0;
 	int ch;
 
 	while ((ch = getopt(argc, argv, "h")) != -1) {
