@@ -1,3 +1,5 @@
+PREFIX=/usr/local
+
 all: hd hexdec
 
 hd: hd.c
@@ -6,8 +8,8 @@ hd: hd.c
 hexdec: hexdec.c
 	$(CC) $(CFLAGS) -o hexdec hexdec.c
 
-install: hd
-	cp hd hexdec $(HOME)/bin
+install: hd hexdec
+	cp hd hexdec $(PREFIX)/bin
 
 clean:
 	rm -f hd hexdec
